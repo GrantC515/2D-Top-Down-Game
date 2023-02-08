@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
@@ -29,5 +29,27 @@ void Awake()
     {
         Time.timeScale = 0;
         GameOverPanel.SetActive(true);
+    }
+
+    public void ReplayButtonPressed()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void HomeButtonPressed()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void PauseButtonPressed()
+    {
+        Time.timeScale = 0;
+        PausePanel.SetActive(true); 
+    }
+
+    public void PlayButtonPressed()
+    {
+        Time.timeScale = 1;
+        PausePanel.SetActive(false);
     }
 }
