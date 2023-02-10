@@ -2,21 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     public GameObject PausePanel;
     public GameObject GameOverPanel;
+    public TextMeshProUGUI CoinCountText;
+    public TextMeshProUGUI GasAmountText;
 
-void Awake() 
-{
-    Instance = this;   
-}
+    [SerializeField] private int _coinsCollected = 0;
+    [SerializeField] private int _gasAmount = 10;
+
+    void Awake() 
+    {
+        Instance = this;   
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1;
+        CoinCountText.text = _coinsCollected.ToString();
+        GasAmountText.text = _gasAmount.ToString();
     }
 
     // Update is called once per frame
@@ -51,5 +59,17 @@ void Awake()
     {
         Time.timeScale = 1;
         PausePanel.SetActive(false);
+    }
+
+    public void UpdateLevelCoinCount(int amount)
+    {
+        _coinsCollected += amount;
+        CoinCountText.text = _coinsCollected.ToString();
+    }
+
+    public void UpdateGasAmount(int amount)
+    {
+        _gasAmount += amount;
+        GasAmountText.text = _gasAmount.ToString();
     }
 }

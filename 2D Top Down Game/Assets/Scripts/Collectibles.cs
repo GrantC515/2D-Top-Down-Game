@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
-    private float collectibleValue = 1;
+    [SerializeField] private int _value;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,17 @@ public class Collectibles : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
        Debug.Log("I've been hit by the player.");
+       
+       if(gameObject.CompareTag("Coin"))
+       {
+            LevelManager.Instance.UpdateLevelCoinCount(_value);
+       }
+
+       if(this.gameObject.CompareTag("Gas Can"))
+       {
+            LevelManager.Instance.UpdateGasAmount(_value);
+       }
+       
        Destroy(this.gameObject); 
     }
 }
