@@ -17,21 +17,29 @@ public class CarMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-
-        transform.Translate(Vector3.up * _moveSpeed * Time.deltaTime);
-        transform.Translate(Vector3.right * _sideMoveSpeed * horizontalInput * Time.deltaTime);
-
-        if(transform.position.x > _xRange)
-        {
-            transform.position = new Vector3(_xRange, transform.position.y, transform.position.z);
-        }
-
-        if(transform.position.x < -_xRange)
-        {
-            transform.position = new Vector3(-_xRange, transform.position.y, transform.position.z);
-        }
+       if(LevelManager.Instance.StartGame())
+       {
+         CarMove();
+       } 
     }
+
+private void CarMove()
+{
+    float horizontalInput = Input.GetAxis("Horizontal");
+
+    transform.Translate(Vector3.up * _moveSpeed * Time.deltaTime);
+    transform.Translate(Vector3.right * _sideMoveSpeed * horizontalInput * Time.deltaTime);
+
+    if(transform.position.x > _xRange)
+     {
+         transform.position = new Vector3(_xRange, transform.position.y, transform.position.z);
+     }
+
+    if(transform.position.x < -_xRange)
+    {
+        transform.position = new Vector3(-_xRange, transform.position.y, transform.position.z);
+    }
+}
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
