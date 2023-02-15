@@ -7,6 +7,10 @@ TagManager:
   - Obstacle
   - Start Line
   - Finish Line
+  - Coin
+  - Gas Can
+  - Boost
+  - Oil
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _moveSpeed = 10f;
+    [SerializeField] private float _boostAmount = 5f;
+    [SerializeField] private float _oilEffect = 5f;
     [SerializeField] private float _sideMoveSpeed = 5f;
     [SerializeField] private float _xRange = 4.35f;
 
@@ -60,5 +62,29 @@ private void CarMove()
         {
 
         }
+        if(other.gameObject.CompareTag("Boost"))
+        {
+            StartCoroutine(SetBoost());
+        }
+        if(other.gameObject.CompareTag("Oil"))
+        {
+            StartCoroutine(OilSpill());
+        }
+    }
+
+    IEnumerator SetBoost()
+    {
+        float currentSpeed = _moveSpeed;
+        _moveSpeed = currentSpeed + _boostAmount;
+        yield return new WaitForSeconds(4f);
+        _moveSpeed = currentSpeed;
+    }
+
+    IEnumerator OilSpill()
+    {
+        float currentSpeed = _moveSpeed;
+        _moveSpeed = currentSpeed - _oilEffect;
+        yield return new WaitForSeconds(2.5f);
+        _moveSpeed = currentSpeed;
     }
 }
