@@ -7,8 +7,9 @@ public class CarMovement : MonoBehaviour
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _boostAmount = 5f;
     [SerializeField] private float _oilEffect = 5f;
-    [SerializeField] private float _sideMoveSpeed = 5f;
+    [SerializeField] private float _sideMoveSpeed = 7.5f;
     [SerializeField] private float _xRange = 4.35f;
+    [SerializeField] private bool _crossedFinishLine = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class CarMovement : MonoBehaviour
 
 private void CarMove()
 {
-    float horizontalInput = Input.GetAxis("Horizontal");
+    float horizontalInput = Input.GetAxisRaw("Horizontal");
 
     transform.Translate(Vector3.up * _moveSpeed * Time.deltaTime);
     transform.Translate(Vector3.right * _sideMoveSpeed * horizontalInput * Time.deltaTime);
@@ -41,6 +42,11 @@ private void CarMove()
     {
         transform.position = new Vector3(-_xRange, transform.position.y, transform.position.z);
     }
+}
+
+public bool CrossedFinishLine()
+{
+    return _crossedFinishLine;
 }
 
     private void OnCollisionEnter2D(Collision2D other) 
@@ -60,7 +66,7 @@ private void CarMove()
 
         if(other.gameObject.CompareTag("Finish Line"))
         {
-
+            _crossedFinishLine = true;
         }
         if(other.gameObject.CompareTag("Boost"))
         {
