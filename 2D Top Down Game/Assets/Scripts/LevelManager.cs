@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     public GameObject PausePanel;
     public GameObject GameOverPanel;
+    public GameObject WinPanel;
     public TextMeshProUGUI CoinCountText;
     public TextMeshProUGUI GasAmountText;
     public TextMeshProUGUI CountdownTimerText;
@@ -48,6 +49,12 @@ public class LevelManager : MonoBehaviour
     {
         Time.timeScale = 0;
         GameOverPanel.SetActive(true);
+    }
+
+    public void YouWon()
+    {
+        Time.timeScale = 0;
+        WinPanel.SetActive(true);
     }
 
     public void ReplayButtonPressed()

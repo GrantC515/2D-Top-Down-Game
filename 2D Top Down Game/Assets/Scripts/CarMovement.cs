@@ -67,7 +67,7 @@ public bool CrossedFinishLine()
         if(other.gameObject.CompareTag("Finish Line"))
         {
             _crossedFinishLine = true;
-            LevelManager.Instance.GameOver();
+            LevelManager.Instance.YouWon();
         }
         if(other.gameObject.CompareTag("Boost"))
         {
