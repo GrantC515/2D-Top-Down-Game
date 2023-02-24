@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4897083454109749023
 Transform:
   m_ObjectHideFlags: 0
@@ -92,6 +92,10 @@ PrefabInstance:
     - target: {fileID: 3426786356166600785, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612673619073600690, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
@@ -279,6 +283,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7612673619073600690, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
 --- !u!4 &7816994943623173564 stripped
@@ -348,6 +356,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4386549912835110628, guid: b52bcaae1c1e18b46b9b629ab4fd3bf3, type: 3}
   m_PrefabInstance: {fileID: 4897083454953269869}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9157445953024695435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4386549912835110630, guid: b52bcaae1c1e18b46b9b629ab4fd3bf3, type: 3}
+  m_PrefabInstance: {fileID: 4897083454953269869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &9138355533543134181
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157445953024695435}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.665
 --- !u!1001 &4897083455006913751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,6 +446,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4897083454109749023}
     m_Modifications:
+    - target: {fileID: 4881230555625034000, guid: 4f7338a447dbaa745b50eb44ffb5b7c6, type: 3}
+      propertyPath: _value
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9073214470639354969, guid: 4f7338a447dbaa745b50eb44ffb5b7c6, type: 3}
       propertyPath: m_Name
       value: Gas Can
