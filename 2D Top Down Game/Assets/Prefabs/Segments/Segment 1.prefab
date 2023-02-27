@@ -92,6 +92,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7612673619073600690, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
+      propertyPath: m_Radius
+      value: 0.6542282
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612673619073600690, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.16077173
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612673619073600690, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}

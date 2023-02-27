@@ -216,6 +216,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7612673619073600690, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
+      propertyPath: m_Radius
+      value: 0.62207365
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612673619073600690, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1929264
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612673619073600690, guid: 09b540e3d928de246a25caa9f737fbbb, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -363,9 +371,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.060289353, y: -0.16077161}
   serializedVersion: 2
-  m_Radius: 1.665
+  m_Radius: 1.3635529
 --- !u!4 &8891930039232385667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4386549912835110628, guid: b52bcaae1c1e18b46b9b629ab4fd3bf3, type: 3}
