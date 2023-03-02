@@ -44,6 +44,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859608067873517420}
     m_Modifications:
+    - target: {fileID: 91213074104677357, guid: 714bb2b406261104298870d20fde3ad8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1379760316053707397, guid: 714bb2b406261104298870d20fde3ad8, type: 3}
       propertyPath: m_Name
       value: Hole 1 (2)
@@ -106,6 +110,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859608067873517420}
     m_Modifications:
+    - target: {fileID: -8052696343916089834, guid: 94d00d355d5e9d145805fd9507313201, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2969819141822288893, guid: 94d00d355d5e9d145805fd9507313201, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -230,6 +238,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859608067873517420}
     m_Modifications:
+    - target: {fileID: 91213074104677357, guid: 714bb2b406261104298870d20fde3ad8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1379760316053707397, guid: 714bb2b406261104298870d20fde3ad8, type: 3}
       propertyPath: m_Name
       value: Hole 1
@@ -292,6 +304,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859608067873517420}
     m_Modifications:
+    - target: {fileID: -8052696343916089834, guid: 94d00d355d5e9d145805fd9507313201, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2969819141822288893, guid: 94d00d355d5e9d145805fd9507313201, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -354,6 +370,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859608067873517420}
     m_Modifications:
+    - target: {fileID: 91213074104677357, guid: 714bb2b406261104298870d20fde3ad8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1379760316053707397, guid: 714bb2b406261104298870d20fde3ad8, type: 3}
       propertyPath: m_Name
       value: Hole 1 (1)
