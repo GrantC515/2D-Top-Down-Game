@@ -136,9 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0709c187a2a911449b11b18365de9a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 7
+  _moveSpeed: 9
   _boostAmount: 8
-  _oilEffect: 5
+  _oilEffect: 7
   _sideMoveSpeed: 10
   _xRange: 4.35
   _crossedFinishLine: 0
