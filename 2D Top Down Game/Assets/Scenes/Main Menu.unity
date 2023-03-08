@@ -1831,7 +1831,7 @@ GameObject:
   - component: {fileID: 1311207005}
   - component: {fileID: 1311207004}
   m_Layer: 5
-  m_Name: Coin Count Text
+  m_Name: Coin Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
