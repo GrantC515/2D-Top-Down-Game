@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(GameObject.Find("Coin Count") != null)
+        {
+            Debug.Log("I found the Coin Count");
+            GameObject.Find("Coin Count").GetComponent<TextMeshProUGUI>;
+        }
     }
 
     // Update is called once per frame
@@ -19,7 +24,7 @@ public class UIManager : MonoBehaviour
 
      public void RaceButtonPressed()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Game Mode");
     }
 
     public void SingleRaceButtonPressed()

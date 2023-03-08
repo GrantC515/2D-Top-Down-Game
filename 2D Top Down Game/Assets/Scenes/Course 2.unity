@@ -518,6 +518,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HomeButtonPressed
       objectReference: {fileID: 0}
+    - target: {fileID: 4977164218121264184, guid: 21490e458646dc847b6fc1586f29a8c6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977164218121264187, guid: 21490e458646dc847b6fc1586f29a8c6, type: 3}
+      propertyPath: m_text
+      value: Course 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4977164218134585467, guid: 21490e458646dc847b6fc1586f29a8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

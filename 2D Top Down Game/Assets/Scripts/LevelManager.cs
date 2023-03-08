@@ -52,6 +52,7 @@ public class LevelManager : MonoBehaviour
     {
         Time.timeScale = 0;
         GameOverPanel.SetActive(true);
+        GameManager.Instance.SetCoinCount(_coinsCollected);
     }
 
     public void YouWon()
@@ -122,7 +123,9 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         CountdownTimerText.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
+        CountdownTimerText.text = "Ready";
+        yield return new WaitForSeconds(2f);
 
         while(_countdownTimer > 0)
         {
