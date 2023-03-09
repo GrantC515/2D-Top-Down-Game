@@ -1804,6 +1804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce607948abc38946aa44c7073294b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GlobalCoinCountText: {fileID: 1311207004}
 --- !u!4 &1228653177
 Transform:
   m_ObjectHideFlags: 0

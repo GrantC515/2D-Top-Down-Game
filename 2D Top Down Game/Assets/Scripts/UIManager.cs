@@ -6,13 +6,19 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+
+    public TextMeshProUGUI GlobalCoinCountText;
+
     // Start is called before the first frame update
     void Start()
     {
         if(GameObject.Find("Coin Count") != null)
         {
-            Debug.Log("I found the Coin Count");
-            GameObject.Find("Coin Count").GetComponent<TextMeshProUGUI>;
+        GlobalCoinCountText.text = GameManager.Instance.GetCoinCount().ToString();
+        }
+        else
+        {
+            Debug.Log("This object does not exist.");
         }
     }
 

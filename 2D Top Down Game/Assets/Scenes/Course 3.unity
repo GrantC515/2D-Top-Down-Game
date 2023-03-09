@@ -572,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 4704911665117763151, guid: 7cc009a460c49c14087448a32d2adedc, type: 3}
     - target: {fileID: 4977164216278500941, guid: 21490e458646dc847b6fc1586f29a8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReplayButtonPressed
+      value: CupComplete
       objectReference: {fileID: 0}
     - target: {fileID: 4977164216643617554, guid: 21490e458646dc847b6fc1586f29a8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
