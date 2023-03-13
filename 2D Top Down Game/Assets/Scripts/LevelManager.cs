@@ -14,7 +14,13 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI CoinCountText;
     public TextMeshProUGUI GasAmountText;
     public TextMeshProUGUI CountdownTimerText;
+    public TextMeshProUGUI CurrentDistanceWon, CurrentDistanceLost;
+    public TextMeshProUGUI BestDistanceWon, BestDistanceLost;
     public Slider GasMeterSlider;
+    public Transform PlayerCar;
+
+    [SerializeField] private Vector2 _startPos, _endPos;
+    private float _distanceTraveled;
 
     private int _countdownTimer = 3;
     [SerializeField] private int _coinsCollected = 0;
@@ -31,9 +37,11 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _startPos = PlayerCar.position;
         Time.timeScale = 1;
         CoinCountText.text = _coinsCollected.ToString();
         GasAmountText.text = _maxGasAmount.ToString();
+        SetMaxGasFillAmount(_currentGasAmount);
         StartCoroutine(StartCountdownTimer());
     }
 
@@ -50,6 +58,8 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver()
     {
+        _endPos = PlayerCar.position;
+        CalculateDistanceTraveled();
         Time.timeScale = 0;
         GameOverPanel.SetActive(true);
         GameManager.Instance.SetCoinCount(_coinsCollected);
@@ -57,8 +67,21 @@ public class LevelManager : MonoBehaviour
 
     public void YouWon()
     {
+        _endPos = PlayerCar.position;
+        CalculateDistanceTraveled();
         Time.timeScale = 0;
         WinPanel.SetActive(true);
+    }
+
+    public void CalculateDistanceTraveled()
+    {
+        float totalDistance = _endPos.y - _startPos.y;
+        GameManager.Instance.SetBestDistanceTraveled(totalDistance);
+        float bestDistance = GameManager.Instance.GetBestDistanceTraveled();
+        CurrentDistanceLost.text = ((int)totalDistance).ToString();
+        CurrentDistanceWon.text = ((int)totalDistance).ToString();
+        BestDistanceLost.text = ((int)bestDistance).ToString();
+        BestDistanceWon.text = ((int)bestDistance).ToString();
     }
 
     public void ReplayButtonPressed()
